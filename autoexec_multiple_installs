@@ -1,0 +1,19 @@
+Bat script to execute all .exe files in folder one by one
+Create file named exe-auto.bat with content mentioned below in script and save it in folder where your exe files are.
+
+Open exe-auto.bat and all your exe files will execute one by one.
+
+exe-auto.bat
+for %%f in (*.exe) do start /wait %%f
+1
+for %%f in (*.exe) do start /wait %%f
+The above mentioned script can be very helpful in installing device drivers if each single driver has separate .exe file. So instead of opening each .exe file manually, using this you can automate such process.
+
+Update 2020-08-08: If you need to execute exe files in folder/subfolders use below mentioned script.
+
+exe-auto.bat
+for /r %%f in (*.exe) do start /wait "" "%%f"
+1
+for /r %%f in (*.exe) do start /wait "" "%%f"
+
+batexescript
